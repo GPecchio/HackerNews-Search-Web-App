@@ -70,12 +70,7 @@ class Search:
         request_json = request.json()
 
         posts = request_json["hits"]
-        '''
-        for post in posts:
-            new_post = Post(post["title"], post["author"], post["url"], post["points"], post["story_text"])
-            print(new_post.print_post())
-            print("")
-        '''
+
         return posts
 
 
