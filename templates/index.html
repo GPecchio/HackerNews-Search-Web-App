@@ -6,12 +6,12 @@
 <body>
     <h1>Hacker News Search</h1>
     <form action="/search" method="post">
-        Terms: <input type="text" name="terms"><br>
-        Sort by date?:  <select name="sort">
+        Terms: <input type="text" name="terms" required><br>
+        Sort by date?:  <select name="sort" required>
                             <option value="n">No</option>
                             <option value="y">Yes</option>
                         </select><br>
-        Tags: <select name="tags">
+        Tags: <select name="tags" required>
                   <option value=" ">None</option>
                   <option value="story">Story</option>
                   <option value="comment">Comment</option>
@@ -21,7 +21,7 @@
                   <option value="ask_hn">Ask HN</option>
                   <option value="front_page">Front Page</option>
               </select><br>
-        Page Number: <input type="text" name="pg_number"><br>
+        Page Number: <input type="text" name="pg_number" required><br>
         <input type="submit" value="Submit">
     </form>
 </body>
