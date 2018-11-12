@@ -1,28 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Hacker News</title>
+    <title>Hacker News Search</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    #header {
+        padding-left: 5px;
+        background-color: #ff6600;
+        color: white;
+    }
+
+    form div + div {
+        margin-top: 1em;
+    }
+
+    input[type=text], select, textarea {
+        width: 25%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+    }
+
+    label {
+        /* To make sure that all labels have the same size and are properly aligned */
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+    }
+
+    #button_div {
+        padding-left: 95px;
+    }
+
+    input[type=submit] {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #ff6600;
+    }
+
+    footer {
+        padding: 2em;
+    }
+    </style>
 </head>
 <body>
-    <h1>Hacker News Search</h1>
+    <div id="header">
+        <h1>Hacker News Search</h1>
+    </div>
     <form action="/search" method="post">
-        Terms: <input type="text" name="terms" required><br>
-        Sort by date?:  <select name="sort" required>
-                            <option value="n">No</option>
-                            <option value="y">Yes</option>
-                        </select><br>
-        Tags: <select name="tags" required>
-                  <option value=" ">None</option>
-                  <option value="story">Story</option>
-                  <option value="comment">Comment</option>
-                  <option value="poll">Poll</option>
-                  <option value="pollopt">Poll Points</option>
-                  <option value="show_hn">Show HN</option>
-                  <option value="ask_hn">Ask HN</option>
-                  <option value="front_page">Front Page</option>
-              </select><br>
-        Page Number: <input type="text" name="pg_number" required><br>
-        <input type="submit" value="Submit">
+        <div>
+            <label>Terms:</label>
+            <input type="text" name="terms" required>
+        </div>
+        <div>
+            <label>Sort by date?:</label>
+            <select name="sort" required>
+                <option value="n">No</option>
+                <option value="y">Yes</option>
+            </select>
+        </div>
+        <div>
+            <label>Tags: </label>
+            <select name="tags" required>
+                <option value=" ">None</option>
+                <option value="story">Story</option>
+                <option value="comment">Comment</option>
+                <option value="poll">Poll</option>
+                <option value="pollopt">Poll Points</option>
+                <option value="show_hn">Show HN</option>
+                <option value="ask_hn">Ask HN</option>
+                <option value="front_page">Front Page</option>
+            </select>
+        </div>
+        <div>
+            <label>Page Number:</label>
+            <input type="text" name="pg_number" required>
+        </div>
+        <div id="button_div">
+            <input type="submit" value="Submit">
+        </div>
     </form>
 </body>
+<footer>Made by <a href="https://www.giovannipecchio.com">Gio Pecchio</a></footer>
 </html>
