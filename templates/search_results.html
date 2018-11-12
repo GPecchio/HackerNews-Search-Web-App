@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Webpage</title>
+</head>
+<body>
+    <h1><a href="/">Hacker News Search</a></h1>
+    {% if posts %}
+        <ul id="navigation">
+            {% for post in posts %}
+                <b>Title: </b>{{ post.title }}<br>
+                <b>Author: </b>{{ post.author }}<br>
+                <b>Url: </b><a href="{{ post.url }}">{{ post.url }}</a><br>
+                <b>Points: </b>{{ post.points }}<br>
+                <b>Story: </b>{{ post.story_text }}<br><br>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h1>My Webpage</h1>
+    {% endif %}
+</body>
+</html>
