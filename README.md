@@ -4,7 +4,7 @@
 demo at: https://hn-search-app.herokuapp.com/
 
 ---
-###Technologies used:
+### Technologies used:
 
 - `python 3.7`
 - Algolia search API
